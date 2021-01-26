@@ -1,115 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Name="VFEBH_BaseBlackHive" Abstract="true" ParentName="BasePawn">
 
-		<statBases>
-			<MarketValue>1750</MarketValue>
-			<MoveSpeed>4.6</MoveSpeed>
-			<ComfyTemperatureMax>40</ComfyTemperatureMax>
-			<LeatherAmount>50</LeatherAmount>
-			<RoyalFavorValue>3</RoyalFavorValue>
-		</statBases>
-
-		<race>
-			<thinkTreeMain>Humanlike</thinkTreeMain>
-			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-			<intelligence>Humanlike</intelligence>
-			<makesFootprints>true</makesFootprints>
-			<lifeExpectancy>80</lifeExpectancy>
-			<leatherDef>Leather_BlackChitin</leatherDef>
-			<nameGenerator>VFEBH_NamerAnimal</nameGenerator>
-			<body>Human</body>
-			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>1</baseHealthScale>
-			<foodType>OmnivoreHuman</foodType>
-			<gestationPeriodDays>45</gestationPeriodDays>
-			<meatMarketValue>0.8</meatMarketValue>
-			<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
-			<litterSizeCurve>
-				<points>
-					<li>(0.5, 0)</li>
-					<li>(1, 1)</li>
-					<li>(1.01, 0.02)</li>
-					<li>(3.5, 0)</li>
-				</points>
-			</litterSizeCurve>
-
-			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
-			<specialShadowData>
-				<volume>(0.3, 0.8, 0.4)</volume>
-				<offset>(0,0,-0.3)</offset>
-			</specialShadowData>
-			<ageGenerationCurve>
-				<points>
-					<li>(14,0)</li>
-					<li>(16,100)</li>
-					<li>(50,100)</li>
-					<li>(60,30)</li>
-					<li>(70,18)</li>
-					<li>(80,10)</li>
-					<li>(90,3)</li>
-					<li>(100,0)</li>
-				</points>
-			</ageGenerationCurve>
-
-		</race>
-		<recipes>
-			<li>ExciseCarcinoma</li>
-			<li>AdministerMechSerumHealer</li>
-			<li>RemoveBodyPart</li>
-			<li>Euthanize</li>
-			<li>Anesthetize</li>
-			<li>CureScaria</li>
-			<li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
-			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
-		</recipes>
-	</ThingDef>
 
 
 	<AlienRace.ThingDef_AlienRace ParentName="VFEBH_BaseBlackHive">
-		<defName>VFEBH_BlackHiveQueen</defName>
-		<label>black hive queen</label>
-		<description>The Queen of the Black Hive</description>
+		<defName>VFEBH_BlackScarab</defName>
+		<label>black scarab</label>
+		<description>A scarab that mines and hauls</description>
 		<statBases>
-			<MoveSpeed>2.0</MoveSpeed>
-			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
-			<MarketValue>1500</MarketValue>
-			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<MoveSpeed>4.5</MoveSpeed>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<MarketValue>150</MarketValue>
 		</statBases>
 		<tools>
 			<li>
-				<label>head claw</label>
+				<label>mandibles</label>
 				<capacities>
-					<li>Cut</li>
+					<li>Bite</li>
 				</capacities>
-				<power>28</power>
-				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
 			</li>
 			<li>
 				<label>head</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>20</power>
+				<power>6</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
+				<chanceFactor>0.1</chanceFactor>
 			</li>
 		</tools>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Regeneration">
-					<rateInTicks>480</rateInTicks>
-			</li>
+
 			<li Class="AnimalBehaviours.CompProperties_ExtremeXenophobia">
-				
+
 				<AcceptedDefnames>
 					<li>VFEBH_BlackHiveQueen</li>
 					<li>VFEBH_BlackScarab</li>
@@ -118,36 +49,37 @@
 		</comps>
 
 		<race>
-			<body>BeetleLikeWithClaw</body>
+			<body>BeetleLike</body>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<intelligence>Humanlike</intelligence>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-			<baseHungerRate>0.70</baseHungerRate>
-			<baseBodySize>4</baseBodySize>
+			<baseBodySize>0.3</baseBodySize>
+			<baseHungerRate>0.10</baseHungerRate>
+			<baseHealthScale>0.45</baseHealthScale>
 			<nameGenerator>VFEBH_NamerAnimal</nameGenerator>
-			<baseHealthScale>8</baseHealthScale>
-			<gestationPeriodDays>12</gestationPeriodDays>
 			<useMeatFrom>Megaspider</useMeatFrom>
+			<leatherDef>Leather_BlackChitin</leatherDef>
+			<gestationPeriodDays>12</gestationPeriodDays>			
 			<wildness>0.95</wildness>
-			<lifeExpectancy>6</lifeExpectancy>
+			<lifeExpectancy>0.5</lifeExpectancy>
 			<lifeStageAges>
 
 				<li>
 					<def>EusocialInsectAdult</def>
 					<minAge>0</minAge>
-					<soundWounded>Pawn_BigInsect_Pain</soundWounded>
-					<soundDeath>Pawn_BigInsect_Death</soundDeath>
-					<soundCall>Pawn_BigInsect_Call</soundCall>
-					<soundAngry>Pawn_BigInsect_Angry</soundAngry>
+					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+					<soundDeath>Pawn_Megascarab_Death</soundDeath>
+					<soundCall>Pawn_Megascarab_Call</soundCall>
+					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
-			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
 		</race>
 		<alienRace>
 			<generalSettings>
-				<maleGenderProbability>0</maleGenderProbability>
+				<maleGenderProbability>100</maleGenderProbability>
 				<immuneToAge>true</immuneToAge>
 				<canLayDown>false</canLayDown>
 				<disallowedTraits>
@@ -211,10 +143,12 @@
 						<degree>1</degree>
 					</li>
 				</forcedRaceTraitEntries>
-				<maxDamageForSocialfight>5</maxDamageForSocialfight>
+				<maxDamageForSocialfight>1</maxDamageForSocialfight>
 				<allowHumanBios>false</allowHumanBios>
 				<alienPartGenerator>
-					<customDrawSize>(2.5, 2.5)</customDrawSize>
+					<aliencrowntypes>
+						<li>Normal</li>						
+					</aliencrowntypes>
 					<colorChannels>
 						<li>
 							<name>skin</name>
@@ -230,9 +164,9 @@
 						</li>
 					</colorChannels>
 					<alienbodytypes>
-						<li>Female</li>
+						<li>Male</li>
 					</alienbodytypes>
-					<useGenderedHeads>false</useGenderedHeads>
+					<useGenderedHeads>true</useGenderedHeads>
 					<useGenderedBodies>false</useGenderedBodies>
 				</alienPartGenerator>
 
@@ -240,9 +174,9 @@
 			</generalSettings>
 			<graphicPaths>
 				<li>
-					<body>Things/Pawn/Animal/VFEBH_BlackQueen/</body>
-					<head/>
-					<skeleton>Things/Pawn/Animal/VFEBH_BlackQueen/Dessicated/Dessicated</skeleton>
+					<body>Things/Pawn/Animal/VFEBH_BlackScarab/</body>
+					<head>Things/Pawn/Animal/VFEBH_BlackScarab/Head/</head>
+					<skeleton></skeleton>
 					<skull/>
 				</li>
 
@@ -304,29 +238,13 @@
 
 	</AlienRace.ThingDef_AlienRace>
 	<PawnKindDef ParentName="TribalBase">
-		<defName>VFEBH_BlackHiveQueen</defName>
-		<label>black hive queen</label>
-		<race>VFEBH_BlackHiveQueen</race>
-		<combatPower>300</combatPower>
+		<defName>VFEBH_BlackScarab</defName>
+		<label>black scarab</label>
+		<race>VFEBH_BlackScarab</race>
+		<combatPower>50</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
-		<lifeStages>
-
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/VFEBH_BlackQueen/Naked_Female</texPath>
-					<drawSize>2</drawSize>
-					<shadowData>
-						<volume>(0.5, 0.7, 0.43)</volume>
-						<offset>(0,0,-0.1)</offset>
-					</shadowData>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/VFEBH_BlackQueen/Dessicated/Dessicated</texPath>
-					<drawSize>2</drawSize>
-				</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
+		
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
@@ -338,7 +256,7 @@
 
 
 	<AlienRace.RaceSettings>
-		<defName>VFEBH_BlackHiveQueen_RaceSettings</defName>
+		<defName>VFEBH_BlackScarab_RaceSettings</defName>
 		<pawnKindSettings>
 			<alienslavekinds>
 
@@ -347,19 +265,7 @@
 
 			</alienrefugeekinds>
 			<startingColonists>
-				<li>
-					<pawnKindEntries>
-						<li>
-							<kindDefs>
-								<li>VFEBH_BlackHiveQueen</li>
-							</kindDefs>
-							<chance>100.0</chance>
-						</li>
-					</pawnKindEntries>
-					<factionDefs>
-						<li>VFEBH_InsectColony</li>
-					</factionDefs>
-				</li>
+				
 			</startingColonists>
 			<alienwandererkinds>
 
