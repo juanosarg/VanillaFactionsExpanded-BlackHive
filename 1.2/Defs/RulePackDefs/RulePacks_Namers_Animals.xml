@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+  <RulePackDef>
+    <defName>VFEBH_NamerAnimalUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>VFEBH_NamerAnimal->Names/Animal_Insects</li>
+       
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>VFEBH_NamerAnimal</defName>
+    <include>
+      <li>VFEBH_NamerAnimalUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=6)->[VFEBH_NamerAnimal]</li>
+        <li>r_name(p=6)->[VFEBH_NamerAnimal]</li>
+        <li>r_name(p=6)->[VFEBH_NamerAnimal]</li>
+        <li>r_name->[exoticname]</li>
+
+        <li>exoticname(p=2)->[AdjectiveBadass]</li>
+        <li>exoticname(p=2)->[PersonBadass]</li>
+        <li>exoticname->[Enemy]</li>
+        <li>exoticname->[ConceptAny]</li>
+        <li>exoticname->[Color]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  
+
+</Defs>

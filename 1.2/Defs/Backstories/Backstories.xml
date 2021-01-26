@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Defs>
+
+	<AlienRace.BackstoryDef>
+		<defName>VFEBH_ScionBackstory</defName>
+		<title>Scion</title>
+		<baseDescription>As a descendant of one of the oldest genelines of the Black Hive, [PAWN_nameFull] has resolutely set to build a new colony. It will certainly be hard at first, but [PAWN_nameFull] doesn't even consider failure an option.</baseDescription>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<bodyTypeMale>Male</bodyTypeMale>
+        <skillGains>
+			
+			<li>
+				<defName>Social</defName>
+				<amount>5</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>4</amount>
+			</li>
+		</skillGains>	
+		<forcedTraits>
+			
+			<li>
+				<defName>SpeedOffset</defName>
+				<degree>2</degree>
+				<chance>65</chance>
+			</li>
+			<li>
+				<defName>Immunity</defName>
+				<degree>1</degree>
+				<chance>85</chance>
+			</li>
+			<li>
+				<defName>Nerves</defName>
+				<degree>1</degree>
+				<chance>45</chance>
+			</li>
+			
+		</forcedTraits>
+		
+		<spawnCategories>
+			<li>VFEBH_BlackHiveBackstories</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>VFEBH_ParagonBackstory</defName>
+		<title>Paragon</title>
+		<baseDescription>[PAWN_nameFull] was one of the most vicious princesses at her native hive, raising above the rest by trampling their dismembered corpses. Once the opportunity to create her own hive arose, she didn't hesitate.</baseDescription>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<bodyTypeMale>Male</bodyTypeMale>
+        <skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>6</amount>
+			</li>
+			<li>
+				<defName>Shooting</defName>
+				<amount>-3</amount>
+			</li>
+		</skillGains>	
+		<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>75</chance>
+			</li>
+			
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>45</chance>
+			</li>
+			<li>
+				<defName>Tough</defName>
+				<chance>35</chance>
+			</li>
+			
+		</forcedTraits>
+		
+		<spawnCategories>
+			<li>VFEBH_BlackHiveBackstories</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<!-- Childhood -->
+	
+	<AlienRace.BackstoryDef>
+		<defName>VFEBH_PrincessBackstory</defName>
+		<title>Princess</title>
+		<baseDescription>[PAWN_nameFull] hatched as a princess into a life of privilege. Destined to grow into a queen and to lead the construction of a new hive. The future of the Black Hive depends on her.</baseDescription>
+		<bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+			
+		</skillGains>
+		<spawnCategories>
+			<li>VFEBH_BlackHiveBackstories</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	
+				
+	
+</Defs>				
+
+							
+					
+							
+					
+					
+							
+					
+					
+					
