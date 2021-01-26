@@ -56,6 +56,7 @@
 			<baseBodySize>0.3</baseBodySize>
 			<baseHungerRate>0.10</baseHungerRate>
 			<baseHealthScale>0.45</baseHealthScale>
+
 			<nameGenerator>VFEBH_NamerAnimal</nameGenerator>
 			<useMeatFrom>Megaspider</useMeatFrom>
 			<leatherDef>Leather_BlackChitin</leatherDef>
@@ -79,7 +80,8 @@
 		</race>
 		<alienRace>
 			<generalSettings>
-				<maleGenderProbability>100</maleGenderProbability>
+				<minAgeForAdulthood>10000</minAgeForAdulthood>
+				<maleGenderProbability>0</maleGenderProbability>
 				<immuneToAge>true</immuneToAge>
 				<canLayDown>false</canLayDown>
 				<disallowedTraits>
@@ -146,9 +148,7 @@
 				<maxDamageForSocialfight>1</maxDamageForSocialfight>
 				<allowHumanBios>false</allowHumanBios>
 				<alienPartGenerator>
-					<aliencrowntypes>
-						<li>Normal</li>						
-					</aliencrowntypes>
+					
 					<colorChannels>
 						<li>
 							<name>skin</name>
@@ -164,10 +164,11 @@
 						</li>
 					</colorChannels>
 					<alienbodytypes>
-						<li>Male</li>
+						<li>Female</li>
+						<li>VFEBHFemalePointy</li>
 					</alienbodytypes>
-					<useGenderedHeads>true</useGenderedHeads>
-					<useGenderedBodies>false</useGenderedBodies>
+					
+				
 				</alienPartGenerator>
 
 
@@ -175,8 +176,8 @@
 			<graphicPaths>
 				<li>
 					<body>Things/Pawn/Animal/VFEBH_BlackScarab/</body>
-					<head>Things/Pawn/Animal/VFEBH_BlackScarab/Head/</head>
-					<skeleton></skeleton>
+					<head></head>
+					<skeleton/>
 					<skull/>
 				</li>
 
@@ -244,11 +245,11 @@
 		<combatPower>50</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
-		
+
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
-					<li>VFEBH_BlackHiveBackstories</li>
+					<li>VFEBH_BlackHiveDroneBackstories</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
@@ -265,7 +266,7 @@
 
 			</alienrefugeekinds>
 			<startingColonists>
-				
+
 			</startingColonists>
 			<alienwandererkinds>
 

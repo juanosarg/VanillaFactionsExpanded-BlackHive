@@ -147,6 +147,7 @@
 		</race>
 		<alienRace>
 			<generalSettings>
+				<minAgeForAdulthood>0</minAgeForAdulthood>
 				<maleGenderProbability>0</maleGenderProbability>
 				<immuneToAge>true</immuneToAge>
 				<canLayDown>false</canLayDown>

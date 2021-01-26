@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+ 
+
+  <BodyTypeDef>
+    <defName>VFEBHFemalePointy</defName>
+    <headOffset>(0.10, 0.34)</headOffset>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_Female</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  
+  
+</Defs>

@@ -3,37 +3,121 @@
 
 <Defs>
 
+<!-- Values for workAllows: 			
+• None
+• ManualDumb
+• ManualSkilled
+• Violent
+• Caring
+• Commoner
+• Intellectual
+• Animals
+• Artistic
+• Crafting
+• Cooking
+• Firefighting
+• Cleaning
+• Hauling
+• PlantWork
+• Mining
+• Hunting
+• AllWork	
+
+-->
+
+
+	<!-- Childhood -->
+
+	<AlienRace.BackstoryDef>
+		<defName>VFEBH_PrincessBackstory</defName>
+		<title>Princess</title>
+		<baseDescription>[PAWN_nameFull] hatched as a princess into a life of privilege. Destined to grow into a queen and lead the construction of a new hive. The future of the Black Hive depends on her. No mechanoid will survive the onslaught of her progeny.</baseDescription>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+
+		</skillGains>
+		<workAllows>
+			<li>AllWork</li>
+			<li>Commoner</li>
+			<li>ManualSkilled</li>
+			<li>Crafting</li>
+			<li>Social</li>
+			<li>Intellectual</li>
+			<li>Violent</li>
+			<li>Firefighting</li>
+	
+		</workAllows>
+		<spawnCategories>
+			<li>VFEBH_BlackHiveBackstories</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>VFEBH_DroneBackstory</defName>
+		<title>Worker</title>
+		<baseDescription>[PAWN_nameFull] is a worker, the backbone of the Black Hive. Workers take care of the most basic physical tasks, like mining, construction and hauling.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+
+			<li>
+				<defName>Mining</defName>
+				<amount>6</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>5</amount>
+			</li>
+
+		</skillGains>
+		<workAllows>
+			<li>ManualDumb</li>
+			<li>AllWork</li>
+			<li>Commoner</li>
+			<li>ManualSkilled</li>
+			<li>Mining</li>
+			<li>Hauling</li>
+			<li>Cleaning</li>
+			<li>Violent</li>
+			<li>Firefighting</li>			
+		</workAllows>
+		<spawnCategories>
+			<li>VFEBH_BlackHiveDroneBackstories</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+	<!-- Adult -->
+
 	<AlienRace.BackstoryDef>
 		<defName>VFEBH_ScionBackstory</defName>
 		<title>Scion</title>
-		<baseDescription>As a descendant of one of the oldest genelines of the Black Hive, [PAWN_nameFull] has resolutely set to build a new colony. It will certainly be hard at first, but [PAWN_nameFull] doesn't even consider failure an option.</baseDescription>
+		<baseDescription>As a descendant of one of the oldest genelines of the Black Hive, [PAWN_nameFull] has resolutely set to build a new colony. It will certainly be hard at first, but [PAWN_nameFull], a natural born leader, doesn't even consider failure an option.</baseDescription>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<bodyTypeMale>Male</bodyTypeMale>
-        <skillGains>
-			
+		<skillGains>
+
 			<li>
 				<defName>Social</defName>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Construction</defName>
+				<defName>Crafting</defName>
 				<amount>3</amount>
-			</li>
-			<li>
-				<defName>Mining</defName>
-				<amount>2</amount>
-			</li>
-			<li>
-				<defName>Plants</defName>
-				<amount>2</amount>
 			</li>
 			<li>
 				<defName>Intellectual</defName>
 				<amount>4</amount>
 			</li>
+			
 		</skillGains>	
 		<forcedTraits>
-			
+
 			<li>
 				<defName>SpeedOffset</defName>
 				<degree>2</degree>
@@ -49,24 +133,24 @@
 				<degree>1</degree>
 				<chance>45</chance>
 			</li>
-			
+
 		</forcedTraits>
-		
+
 		<spawnCategories>
 			<li>VFEBH_BlackHiveBackstories</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
-	
+
 	<AlienRace.BackstoryDef>
 		<defName>VFEBH_ParagonBackstory</defName>
 		<title>Paragon</title>
 		<baseDescription>[PAWN_nameFull] was one of the most vicious princesses at her native hive, raising above the rest by trampling their dismembered corpses. Once the opportunity to create her own hive arose, she didn't hesitate.</baseDescription>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<bodyTypeMale>Male</bodyTypeMale>
-        <skillGains>
+		<skillGains>
 			<li>
 				<defName>Melee</defName>
-				<amount>6</amount>
+				<amount>7</amount>
 			</li>
 			<li>
 				<defName>Shooting</defName>
@@ -78,7 +162,7 @@
 				<defName>Brawler</defName>
 				<chance>75</chance>
 			</li>
-			
+
 			<li>
 				<defName>Bloodlust</defName>
 				<chance>45</chance>
@@ -87,47 +171,68 @@
 				<defName>Tough</defName>
 				<chance>35</chance>
 			</li>
-			
+
 		</forcedTraits>
-		
+
 		<spawnCategories>
 			<li>VFEBH_BlackHiveBackstories</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
-	
-	<!-- Childhood -->
 	
 	<AlienRace.BackstoryDef>
-		<defName>VFEBH_PrincessBackstory</defName>
-		<title>Princess</title>
-		<baseDescription>[PAWN_nameFull] hatched as a princess into a life of privilege. Destined to grow into a queen and to lead the construction of a new hive. The future of the Black Hive depends on her.</baseDescription>
+		<defName>VFEBH_ParagonBackstory</defName>
+		<title>Schemer</title>
+		<baseDescription>[PAWN_nameFull] wasn't the first choice to lead the construction of the new hive, but she made sure that she would be chosen over more qualified oponents. Manipulation, scheming and subterfuge come natural to [PAWN_nameFull], and she won't let trifles like truth or justice get in the way of her destiny.</baseDescription>
+		<bodyTypeFemale>Female</bodyTypeFemale>
 		<bodyTypeMale>Male</bodyTypeMale>
-        <bodyTypeFemale>Female</bodyTypeFemale>
-		<slot>Childhood</slot>
 		<skillGains>
-			
 			<li>
 				<defName>Melee</defName>
-				<amount>1</amount>
+				<amount>3</amount>
 			</li>
-			
-		</skillGains>
+			<li>
+				<defName>Crafting</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>	
+		<forcedTraits>
+			<li>
+				<defName>FastLearner</defName>
+				<chance>75</chance>
+			</li>
+
+			<li>
+				<defName>TooSmart</defName>
+				<chance>45</chance>
+			</li>
+			<li>
+				<defName>GreatMemory</defName>
+				<chance>35</chance>
+			</li>
+
+		</forcedTraits>
+
 		<spawnCategories>
 			<li>VFEBH_BlackHiveBackstories</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
-	
-	
-				
-	
+
+
+
+
+
+
 </Defs>				
 
-							
-					
-							
-					
-					
-							
-					
-					
-					
+
+
+
+
+
+
+
+
