@@ -84,6 +84,10 @@
 				<maleGenderProbability>0</maleGenderProbability>
 				<immuneToAge>true</immuneToAge>
 				<canLayDown>false</canLayDown>
+				<notXenophobistTowards>
+					<li>VFEBH_BlackHiveQueen</li>
+					
+				</notXenophobistTowards>
 				<disallowedTraits>
 					<li>
 						<defName>Nudist</defName>                   		
@@ -165,7 +169,10 @@
 					</colorChannels>
 					<alienbodytypes>
 						<li>Female</li>
-						<li>VFEBHFemalePointy</li>
+						<li>FemalePointy</li>
+						<li>Fat</li>
+						<li>ThreeClaws</li>
+						<li>LongClaws</li>
 					</alienbodytypes>
 					
 				
@@ -220,6 +227,7 @@
 					<li>PrisonerBanishedToDie</li>						
 					<li>ExecutedPrisoner</li>
 					<li>KilledColonist</li>
+					<li>AteWithoutTable</li>
 
 				</cannotReceiveThoughts>
 			</thoughtSettings>
